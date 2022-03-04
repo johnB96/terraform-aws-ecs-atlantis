@@ -65,8 +65,7 @@ module "github_webhooks" {
 }
 
 module "ecs_web_app" {
-  source  = "cloudposse/ecs-web-app/aws"
-  version = "0.67.1"
+  source = "git::https://github.com/johnB96/terraform-aws-ecs-web-app"
 
   region      = var.region
   vpc_id      = var.vpc_id
